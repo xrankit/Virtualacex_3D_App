@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:virtual_ace_xd/components/custom_suffix_icon.dart';
 import 'package:virtual_ace_xd/components/default_button.dart';
 import 'package:virtual_ace_xd/components/form_error.dart';
+import 'package:virtual_ace_xd/screens/complete_profile/complete_profile_screen.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
 
 class SignUpForm extends StatefulWidget {
+  const SignUpForm({super.key});
+
   @override
   _SignUpFormState createState() => _SignUpFormState();
 }
@@ -52,7 +55,7 @@ class _SignUpFormState extends State<SignUpForm> {
             press: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                // if all are valid then go to success screen
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
           ),
