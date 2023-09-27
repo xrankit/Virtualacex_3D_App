@@ -3,7 +3,7 @@ import 'package:virtual_ace_xd/components/default_button.dart';
 import 'package:virtual_ace_xd/components/form_error.dart';
 import 'package:virtual_ace_xd/components/custom_suffix_icon.dart';
 import 'package:virtual_ace_xd/components/no_account_text.dart';
-import 'package:virtual_ace_xd/screens/sign_in/sign_in_screen.dart';
+import 'package:virtual_ace_xd/screens/otp/otp_screen.dart';
 import 'package:virtual_ace_xd/size_config.dart';
 
 import '../../../constants.dart';
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
                 ),
               ),
               const Text(
-                "Please enter your email and we will send \nyou a link to return to your account",
+                "Please enter your email and we will send \n4 digit code to your mail",
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight * 0.1),
@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ); 
   }
 }
 
@@ -104,12 +104,12 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             text: "Continue",
             press: () {
               if (_formKey.currentState!.validate()) {
-                Navigator.pushNamed(context, SignInScreen .routeName);
+                Navigator.pushNamed(context, OtpScreen.routeName);
               }
             },
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.1),
-          NoAccountText(),
+          const NoAccountText(),
         ],
       ),
     );
