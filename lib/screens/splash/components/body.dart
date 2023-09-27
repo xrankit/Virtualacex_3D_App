@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:virtual_ace_xd/constants.dart';
+import 'package:virtual_ace_xd/screens/sign_in/sign_in_screen.dart';
 import 'package:virtual_ace_xd/size_config.dart';
 
 // This is the best practice
 import '../components/splash_content.dart';
-import '../../../components/default_button.dart';
+import '../../../../components/default_button.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
@@ -18,17 +19,17 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to VirtualAce X3D, Let’s Buy More!",
-      "image": "assets/images/splash_1.png"
+      "text": "Welcome to VirtualAceX3D, Let’s Buy More!",
+      "image": "assets/images/splash_3.png"
     },
     {
       "text":
-          "Lets Enter the Future from Here 3D world \nwith VirtualAceX",
+          "Lets Enter the Future from Here \n 3D world with VirtualAceX",
       "image": "assets/images/splash_2.png"
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
+      "image": "assets/images/splash_1.png"
     },
   ];
   @override
@@ -72,7 +73,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        //DefaultButton
+                        Navigator.pushNamed(context, SignInScreen.routeName);
                       },
                     ),
                     const Spacer(),

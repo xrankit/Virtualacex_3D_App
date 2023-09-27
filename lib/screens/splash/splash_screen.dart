@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:virtual_ace_xd/screens/components/body.dart';
+import 'package:virtual_ace_xd/screens/splash/components/body.dart';
 import 'package:virtual_ace_xd/size_config.dart';
 
 class SplashScreen extends StatelessWidget {
