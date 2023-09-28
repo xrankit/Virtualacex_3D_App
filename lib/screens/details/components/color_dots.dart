@@ -29,7 +29,7 @@ class ColorDots extends StatelessWidget {
               isSelected: index == selectedColor,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           RoundedIconBtn(
             icon: Icons.remove,
             press: () {},
